@@ -1,0 +1,331 @@
+[
+{
+"name": "Nasarawa State University Keffi",
+"domains": [
+"nsuk.edu.ng"
+],
+"token": "nsuk"
+},
+{
+"name": "Ahmadu Bello University",
+"domains": [
+"abu.edu.ng"
+],
+"token": "abu"
+},
+{
+"name": "Bayero University Kano",
+"domains": [
+"buk.edu.ng"
+],
+"token": "buk"
+},
+{
+"name": "University of Abuja",
+"domains": [
+"uniabuja.edu.ng"
+],
+"token": "uniabuja"
+},
+{
+"name": "University of Ilorin",
+"domains": [
+"unilorin.edu.ng"
+],
+"token": "unilorin"
+},
+{
+"name": "University of Jos",
+"domains": [
+"unijos.edu.ng"
+],
+"token": "unijos"
+},
+{
+"name": "FUT Minna",
+"domains": [
+"futminna.edu.ng"
+],
+"token": "futminna"
+},
+{
+"name": "IBB University Lapai",
+"domains": [
+"ibbu.edu.ng"
+],
+"token": "ibbu"
+},
+{
+"name": "Federal University Lafia",
+"domains": [
+"fulafia.edu.ng"
+],
+"token": "fulafia"
+},
+{
+"name": "Federal University Lokoja",
+"domains": [
+"fulokoja.edu.ng"
+],
+"token": "fulokoja"
+},
+{
+"name": "Benue State University",
+"domains": [
+"bsum.edu.ng"
+],
+"token": "bsum"
+},
+{
+"name": "Federal University of Agriculture Makurdi",
+"domains": [
+"uam.edu.ng"
+],
+"token": "uam"
+},
+{
+"name": "Kwara State University",
+"domains": [
+"kwasu.edu.ng"
+],
+"token": "kwasu"
+},
+{
+"name": "Federal University Wukari",
+"domains": [
+"fuwukari.edu.ng"
+],
+"token": "fuwukari"
+},
+{
+"name": "Plateau State University",
+"domains": [
+"plasu.edu.ng"
+],
+"token": "plasu"
+},
+{
+"name": "Usmanu Danfodiyo University",
+"domains": [
+"udusok.edu.ng"
+],
+"token": "udusok"
+},
+{
+"name": "Federal University Dutse",
+"domains": [
+"fud.edu.ng"
+],
+"token": "fud"
+},
+{
+"name": "Kaduna State University",
+"domains": [
+"kasu.edu.ng"
+],
+"token": "kasu"
+},
+{
+"name": "Nigerian Defence Academy",
+"domains": [
+"nda.edu.ng"
+],
+"token": "nda"
+},
+{
+"name": "ATBU Bauchi",
+"domains": [
+"atbu.edu.ng"
+],
+"token": "atbu"
+},
+{
+"name": "University of Maiduguri",
+"domains": [
+"unimaid.edu.ng"
+],
+"token": "unimaid"
+},
+{
+"name": "Federal University Gusau",
+"domains": [
+"fugusau.edu.ng"
+],
+"token": "fugusau"
+},
+{
+"name": "Federal University Birnin Kebbi",
+"domains": [
+"fubk.edu.ng"
+],
+"token": "fubk"
+},
+{
+"name": "Federal University Kashere",
+"domains": [
+"fukashere.edu.ng"
+],
+"token": "fukashere"
+},
+{
+"name": "Federal University Gashua",
+"domains": [
+"fugashua.edu.ng"
+],
+"token": "fugashua"
+},
+{
+"name": "Sule Lamido University",
+"domains": [
+"slu.edu.ng"
+],
+"token": "slu"
+},
+{
+"name": "Yusuf Maitama Sule University",
+"domains": [
+"yumsuk.edu.ng"
+],
+"token": "yumsuk"
+},
+{
+"name": "Nile University of Nigeria",
+"domains": [
+"nileuniversity.edu.ng"
+],
+"token": "nileuniversity"
+},
+{
+"name": "Baze University",
+"domains": [
+"bazeuniversity.edu.ng"
+],
+"token": "bazeuniversity"
+},
+{
+"name": "Veritas University",
+"domains": [
+"veritas.edu.ng"
+],
+"token": "veritas"
+},
+{
+"name": "Bingham University",
+"domains": [
+"binghamuni.edu.ng"
+],
+"token": "binghamuni"
+},
+{
+"name": "Federal Polytechnic Nasarawa",
+"domains": [
+"fedpolynas.edu.ng"
+],
+"token": "fedpolynas"
+},
+{
+"name": "Jaiz Bank",
+"domains": [
+"jaizbankplc.com"
+],
+"token": "jaiz"
+},
+{
+"name": "TAJ Bank",
+"domains": [
+"tajbank.com"
+],
+"token": "tajbank"
+},
+{
+"name": "Dangote",
+"domains": [
+"dangote.com"
+],
+"token": "dangote"
+},
+{
+"name": "BUA Group",
+"domains": [
+"buagroup.com"
+],
+"token": "buagroup"
+},
+{
+"name": "INEC",
+"domains": [
+"inecnigeria.org"
+],
+"token": "inec"
+},
+{
+"name": "NYSC",
+"domains": [
+"nysc.gov.ng"
+],
+"token": "nysc"
+},
+{
+"name": "EFCC",
+"domains": [
+"efcc.gov.ng"
+],
+"token": "efcc"
+},
+{
+"name": "NCC",
+"domains": [
+"ncc.gov.ng"
+],
+"token": "ncc"
+},
+{
+"name": "NAFDAC",
+"domains": [
+"nafdac.gov.ng"
+],
+"token": "nafdac"
+},
+{
+"name": "CAC",
+"domains": [
+"cac.gov.ng"
+],
+"token": "cac"
+},
+{
+"name": "FRSC",
+"domains": [
+"frsc.gov.ng"
+],
+"token": "frsc"
+},
+{
+"name": "NUC",
+"domains": [
+"nuc.edu.ng"
+],
+"token": "nuc"
+},
+{
+"name": "TETFund",
+"domains": [
+"tetfund.gov.ng"
+],
+"token": "tetfund"
+},
+{
+"name": "Nigeria Customs",
+"domains": [
+"customs.gov.ng"
+],
+"token": "customs"
+},
+{
+"name": "NIPOST",
+"domains": [
+"nipost.gov.ng"
+],
+"token": "nipost"
+}
+]

@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PhishGuard Nigeria – Random Forest</title>
+<link rel="icon" href="static/icon.svg"><link rel="stylesheet" href="static/style.css"></head>
+<body>
+<div id="loader" class="loader" hidden><div class="ring"><img src="static/icon.svg" alt="" width="56"></div><p>Loading PhishGuard…</p></div>
+
+<div id="landing">
+ <section class="herosec">
+  <div class="slides"><div class="slide s1 on"></div><div class="slide s2"></div><div class="slide s3"></div><div class="shade"></div></div>
+  <nav class="top"><img src="static/icon.svg" alt="logo" width="30"><b>PhishGuard Nigeria</b>
+   <button data-jump="analysis">Analysis</button><button data-jump="news">News</button><button data-go="model">Model</button><button data-go="scan">Scan</button></nav>
+  <div class="hero"><h1 id="sl-title"></h1><p id="sl-text"></p>
+   <div class="row c"><button class="btn" data-go="scan">Start scanning</button><button class="btn alt" data-jump="analysis">See the analysis</button><button class="btn alt" data-go="model">Random Forest model</button><button class="btn alt" data-jump="news">Latest news</button></div>
+   <div id="teaser" class="cards"></div><div id="dots" class="dots"></div></div>
+ </section>
+ <main class="lp">
+  <section id="analysis" class="card"><h2>📊 Phishing website characteristics (data mining)</h2><p id="a-sum" class="muted"></p><p id="a-note" class="badge"></p><ul id="a-find"></ul></section>
+  <div class="grid2"><section class="card"><h3>Phishing vs legitimate URLs in the data</h3><div id="ch-balance"></div></section>
+   <section class="card"><h3>Which traits separate them most (information gain)</h3><div id="ch-gain"></div></section></div>
+  <section class="card"><h3>How common is each trait?</h3><div class="legend"><i class="r"></i>Phishing URLs <i class="g"></i>Legitimate URLs</div><div id="ch-prev"></div></section>
+  <section class="card"><h3>Trait combinations (association rules)</h3><div class="scroll"><table><thead><tr><th>Combination</th><th>Support</th><th>Confidence</th><th>Lift</th></tr></thead><tbody id="a-pairs"></tbody></table></div></section>
+  <section id="news" class="card"><h2>📰 Phishing website news <span id="news-count" class="src"></span></h2>
+   <p class="muted">Live headlines about phishing from KrebsOnSecurity, BleepingComputer, Sophos, The Hacker News, TechCabal, CISA, Malwarebytes, SecurityWeek, Graham Cluley and Google News (which includes Nigerian outlets). Each link opens the original article. Offline, saved safety tips are shown.</p>
+   <ul id="newsl" class="list"></ul></section>
+  <section class="card cta"><h2>Ready to check a link?</h2><button class="btn go" data-go="scan">Start scanning</button></section>
+ </main>
+</div>
+
+<div id="app" hidden>
+ <nav class="top solid"><img src="static/icon.svg" alt="logo" width="30"><b>PhishGuard</b>
+  <button data-tab="scan">Scan</button><button data-tab="model">Random Forest</button><button data-tab="math">Maths</button><button data-tab="home">Home</button></nav>
+ <main>
+  <section id="tab-scan" class="tab">
+   <div class="card"><h2>🔍 Check a website</h2>
+    <div class="row"><input id="url" placeholder="Enter Website" autocomplete="off"><button id="go">Scan</button></div>
+    <details><summary>Optional: host &amp; page details for the Random Forest</summary><div class="rfx"><div class="g2"><div><label for="rf-age">Domain age (days)</label><input type="number" id="rf-age" min="0" placeholder="unknown"></div><div><label for="rf-red">Redirections</label><input type="number" id="rf-red" min="0" value="0"></div></div>
+<div class="g2"><div><div class="ck"><input type="checkbox" id="rf-ssl" checked><span>SSL certificate valid</span></div><div class="ck"><input type="checkbox" id="rf-dns" checked><span>DNS record exists</span></div></div><div><div class="ck"><input type="checkbox" id="rf-ifr"><span>Page has iframe</span></div><div class="ck"><input type="checkbox" id="rf-frm"><span>Form posts to another domain</span></div></div></div>
+<p class="muted">A browser cannot look these up for other sites, so blank or unticked fields are treated as normal.</p></div></details>
+<p id="err" class="err"></p>
+    <div id="result" hidden><div class="gauge"><div id="bar"></div></div><h3 id="verdict"></h3><p id="brand"></p><ul id="reasons"></ul><div id="rf"></div></div></div>
+   <div class="grid2"><div class="card"><h2>📈 Your scan results</h2><div id="ch-scans"></div></div>
+    <div class="card"><h2>🕘 Recent scans</h2><ul id="history" class="list"></ul></div></div>
+   <div class="card"><h2>🛡️ Stay safe</h2><ul><li>Banks never ask for your PIN, OTP or token.</li>
+    <li>Type the official address yourself; do not tap links in SMS.</li>
+    <li>Real government sites end in <b>.gov.ng</b>; schools in <b>.edu.ng</b>.</li>
+    <li>Free money, scholarships and "BVN update" offers are scams.</li></ul></div>
+  </section>
+  <section id="tab-model" class="tab rfx" hidden>
+   <div class="card"><h2>🌲 Random Forest results (thesis, test set of 2,178 instances)</h2><div class="m"><div><b>97.8%</b>Accuracy</div><div><b>98.2%</b>Precision</div><div><b>97.5%</b>Recall</div><div><b>97.8%</b>F1-score</div><div><b>0.992</b>AUC-ROC</div></div></div>
+   <div class="card"><h3>Feature importance (Table 4.2)</h3><div id="imp"></div></div>
+   <div class="card"><h3>Confusion matrix (Table 4.5)</h3><div class="cm"><div class="h"></div><div class="h">Pred. phishing</div><div class="h">Pred. legitimate</div><div class="h">Actual phishing</div><div style="background:var(--g);color:#fff">944 TP</div><div style="background:var(--r);color:#fff">18 FN</div><div class="h">Actual legit.</div><div style="background:var(--r);color:#fff">37 FP</div><div style="background:var(--g);color:#fff">1,179 TN</div></div></div>
+   <div class="card"><h3>Classifier comparison (Table 4.6, accuracy)</h3><div id="cmp"></div></div>
+   <div class="card"><h3>Dataset &amp; setup</h3><p class="muted">11,055 instances (UCI, PhishTank, Alexa, Cisco Umbrella), 10,890 after removing 165 duplicates; 30 → 20 features, top 15 selected with a correlation filter and RFE. 80/20 stratified split; GridSearchCV with 5-fold CV; best settings: 100 trees, unlimited depth, max_features = sqrt, class_weight = balanced. The forest used on the Scan page is a 51-tree demonstration ensemble built from these 15 features and importance scores, not the Jupyter-trained model.</p></div>
+  </section>
+  <section id="tab-math" class="tab rfx" hidden>
+   <div class="card"><h2>Shannon entropy of a domain</h2><p class="muted">H = −Σ p(x)·log₂ p(x). Thesis example: “secure login” ≈ 3.41 bits.</p><input type="text" id="ent" value="secure login" autocomplete="off"><p id="entO"></p></div>
+   <div class="card"><h2>Gini impurity &amp; information gain</h2><p class="muted">Split on Has HTTPS. Defaults match the thesis example (gain ≈ 0.098).</p><div class="g2"><div><label>HTTPS=0 phishing</label><input type="number" id="a1" value="38" min="0"></div><div><label>HTTPS=0 legit</label><input type="number" id="a2" value="7" min="0"></div><div><label>HTTPS=1 phishing</label><input type="number" id="b1" value="22" min="0"></div><div><label>HTTPS=1 legit</label><input type="number" id="b2" value="33" min="0"></div></div><p id="giniO"></p></div>
+  </section>
+ </main>
+</div>
+<script src="static/data.js"></script><script src="static/local.js"></script><script src="static/rf.js"></script><script src="static/app.js"></script></body></html>
